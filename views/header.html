@@ -12,16 +12,46 @@
         .container {
             padding: 0 !important;
         }
+
+        .tabHeader {
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            margin: 0;
+            background: #000;
+        }
+
+        .tabHeader a {
+            color: #fff;
+        }
+
+        .tabHeader>div {
+            text-align: center;
+        }
+
+        .tabHeader :hover a {
+            color: #000;
+        }
+
+        .tabHeader>div:hover {
+            background: #fff;
+
+        }
+        #top{
+            background: #000;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container" id="head">
-        <div class="row">
-            <% tabs.forEach(function(tab){ %>
-            <div class="col-sm">
-                <a href='<%= tab.url %>'> <%- tab.tabName %></a>
+    <div id="top">
+        <div class="container" id="head">
+            <div class="row tabHeader">
+                <% tabs.forEach(function(tab){ %>
+                <div class="col-sm">
+                    <a href='<%= tab.url %>'> <%- tab.tabName %></a>
+                </div>
+                <% }); %>
             </div>
-            <% }); %>
         </div>
     </div>

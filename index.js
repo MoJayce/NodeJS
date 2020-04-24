@@ -17,7 +17,9 @@ app.use(express.static('static'))
 // app.use('/',require('./router/index'))
 app.use(/\/(index)?/,require('./router/index'))
 // 调用导航栏
-app.use('/',require('./router/article'))
+app.use('/',require('./router/article'))//文章页
+app.use('/',require('./router/product'))//商品页
+app.use('/',require('./router/about'))//关于我们
 
 
 // 监听服务器
